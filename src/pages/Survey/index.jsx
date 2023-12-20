@@ -63,9 +63,9 @@ export const Survey = () => {
     pergunta41,
     toggleIsFinished,
     isFinished,
-    sectorInput,
-    setSectorInput,
   } = useSurveyContext()
+
+  const [sectorInput, setSectorInput] = useState('TI')
 
   async function handleChangeNPS() {
     event?.preventDefault()
@@ -123,7 +123,6 @@ export const Survey = () => {
       console.error(error)
     }
   }
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const formComponents = [
     <CompFuncionarios />,
@@ -152,7 +151,7 @@ export const Survey = () => {
             placeholder="Setor"
             name="sector"
             value={sectorInput}
-            onChange={(e) => setSectorInput(e.target.value)}
+            onChange={(event) => setSectorInput(event.target.value)}
           />
           <Modal openModal={openModal} handleClose={() => setOpenModal(false)} />
 
