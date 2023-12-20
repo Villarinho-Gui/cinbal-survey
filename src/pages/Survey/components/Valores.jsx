@@ -114,7 +114,7 @@ export const Valores = () => {
               checked={pergunta39 === 'Nem concordo nem discordo'}
               onChange={(event) => setPergunta39(event.target.value)}
             />
-            <StyledLabel htmlFor="Nem concordo nem discordo">Nem concordo nem discordo 🙂</StyledLabel>
+            <StyledLabel htmlFor="q8">Nem concordo nem discordo 🙂</StyledLabel>
 
             <QuestionInput
               type="radio"
