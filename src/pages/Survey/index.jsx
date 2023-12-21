@@ -146,6 +146,7 @@ export const Survey = () => {
         <Steps currentStep={currentStep} />
         <Form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <SectorInput
+            required
             type="text"
             placeholder="Setor"
             name="setor"
