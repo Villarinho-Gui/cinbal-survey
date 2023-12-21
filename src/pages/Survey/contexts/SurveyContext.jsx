@@ -49,7 +49,6 @@ export const SurveyProvider = ({ children }) => {
   const [pergunta40, setPergunta40] = useState('Não concordo nem descordo')
   const [pergunta41, setPergunta41] = useState('Não concordo nem descordo')
   const [isFinished, setIsFinished] = useState(false)
-  const { sectorInput, setSectorInput } = useState('')
 
   const toggleIsFinished = useCallback(() => {
     setIsFinished((oldIsFinished) => !oldIsFinished)
@@ -58,8 +57,6 @@ export const SurveyProvider = ({ children }) => {
   return (
     <SurveyContext.Provider
       value={{
-        sectorInput,
-        setSectorInput,
         isFinished,
         toggleIsFinished,
         pergunta1,
