@@ -149,7 +149,7 @@ export const Survey = () => {
             type="text"
             required
             placeholder="Setor"
-            name="sector"
+            name="setor"
             value={sectorInput}
             onChange={(event) => setSectorInput(event.target.value)}
           />
