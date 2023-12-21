@@ -65,14 +65,14 @@ export const Survey = () => {
     isFinished,
   } = useSurveyContext()
 
-  const [sectorInput, setSectorInput] = useState('TI')
+  const [setor, setSetor] = useState('')
 
   async function handleChangeNPS() {
     event?.preventDefault()
     try {
       await api
         .post('/survey', {
-          sectorInput,
+          setor,
           pergunta1,
           pergunta2,
           pergunta3,
@@ -147,11 +147,10 @@ export const Survey = () => {
         <Form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <SectorInput
             type="text"
-            required
             placeholder="Setor"
             name="setor"
-            value={sectorInput}
-            onChange={(event) => setSectorInput(event.target.value)}
+            value={setor}
+            onChange={(event) => setSetor(event.target.value)}
           />
           <Modal openModal={openModal} handleClose={() => setOpenModal(false)} />
 
