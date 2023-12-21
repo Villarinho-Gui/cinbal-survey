@@ -145,14 +145,18 @@ export const Survey = () => {
       <HomeContainer>
         <Steps currentStep={currentStep} />
         <Form onSubmit={(e) => changeStep(currentStep + 1, e)}>
-          <SectorInput
-            required
-            type="text"
-            placeholder="Setor"
-            name="setor"
-            value={setor}
-            onChange={(event) => setSetor(event.target.value)}
-          />
+          {isFinished ? (
+            ''
+          ) : (
+            <SectorInput
+              required
+              type="text"
+              placeholder="Setor"
+              name="setor"
+              value={setor}
+              onChange={(event) => setSetor(event.target.value)}
+            />
+          )}
           <Modal openModal={openModal} handleClose={() => setOpenModal(false)} />
 
           {isFinished ? '' : <CurrentComponent>{currenComponent}</CurrentComponent>}
