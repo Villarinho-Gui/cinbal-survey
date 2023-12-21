@@ -27,6 +27,7 @@ export const SectorInput = styled.input`
   border: none;
   border-radius: 8px;
   padding: 4px;
+  margin-bottom: 5px;
 
   &:focus {
     outline: none;
